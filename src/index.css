@@ -1,0 +1,65 @@
+:root {
+	font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+	color: #15334a;
+	background: #f4efe4;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background-color: #f4efe4;
+	background-image:
+		radial-gradient(ellipse 90% 55% at 8% -8%, rgba(255, 186, 92, 0.38), transparent 58%),
+		radial-gradient(ellipse 70% 45% at 100% 0%, rgba(94, 186, 214, 0.28), transparent 52%),
+		radial-gradient(ellipse 80% 40% at 50% 100%, rgba(232, 168, 110, 0.18), transparent 60%),
+		linear-gradient(180deg, #f8f1e4 0%, #eef3ef 48%, #e6eef2 100%);
+	background-attachment: fixed;
+}
+
+body::before {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background-image:
+		radial-gradient(rgba(139, 110, 72, 0.16) 0.8px, transparent 1.1px);
+	background-size: 26px 26px;
+	opacity: 0.55;
+	content: '';
+}
+
+body::after {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background:
+		repeating-linear-gradient(
+			-18deg,
+			transparent,
+			transparent 46px,
+			rgba(22, 118, 173, 0.035) 46px,
+			rgba(22, 118, 173, 0.035) 47px
+		);
+	content: '';
+}
+
+button,
+input,
+select {
+	font: inherit;
+}
+
+button,
+a {
+	-webkit-tap-highlight-color: transparent;
+}
