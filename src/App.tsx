@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 import './App.css'
 import { PlaceDetail } from './components/PlaceDetail'
@@ -7,6 +7,7 @@ import { PlaceSearchForm } from './components/PlaceSearchForm'
 import { usePlaces } from './hooks/usePlaces'
 import type { VisitAreaReq } from './types/api/visit'
 import type { Place, PlaceSort } from './types/place'
+import { health } from './api/common'
 
 const defaultSort: PlaceSort = 'Q'
 const placesPerPage = 20
@@ -72,6 +73,10 @@ function App() {
     setSearchFilters({})
     setPageNo(1)
   }
+
+  useEffect(() => {
+    void health()
+  }, [])
 
   return (
     <div className="app-shell">
