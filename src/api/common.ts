@@ -10,7 +10,7 @@ export async function health() {
     console.warn('Health check failed:', error)
   }
 
-  const delay = (8 * 60 + Math.floor(Math.random() * (2 * 60 + 1))) * 1000
+  const delay = (5 * 60 + Math.floor(Math.random() * (2 * 60 + 1))) * 1000
 
   if (healthCheckTimer) {
     clearTimeout(healthCheckTimer)
